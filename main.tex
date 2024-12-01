@@ -1,0 +1,30 @@
+\documentclass[a4paper, 12pt]{book}
+
+% Text styles
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% Inclusão dos arquivos de referências globais (opcional)
+% \addbibresource{referencias_globais.bib}
+\usepackage{tocbibind} % Para incluir o sumário na lista de conteúdo
+\usepackage[style=alphabetic, backend=biber]{biblatex} % Usando biblatex para referências
+\addbibresource{references1.bib}
+\addbibresource{references2.bib}
+
+\begin{document}
+
+\title{Title}
+\author{Author}
+\date{\today}
+
+\maketitle
+
+% Gerar o sumário
+\tableofcontents
+\newpage % Para começar a nova página após o sumário
+
+% Incluindo os capítulos
+\include{chapter1/chapter1}
+\include{chapter2/chapter2}
+
+\end{document}
